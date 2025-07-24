@@ -1,12 +1,50 @@
+/* soft reset do CSS */
+* {
+  margin: 0; /* espaço ao redor de um elemento HTML, fora de suas bordas */
+  padding: 0; /* espaço interno de um elemento, entre seu conteúdo e sua borda. */
+  box-sizing: border-box;
+}
+
 body {
-  background-image: url("https://img.freepik.com/fotos-gratis/fundo-texturizado-abstrato_1258-30522.jpg?semt=ais_hybrid&w=740");
+  background-image: url("../img/fundo.jpg");
   background-size: auto 100vh;
   font-family: Arial;
   height: 100vh;
+  font-size: 12px;
+}
+
+/* Se a tela tiver no mínimo 400px, vai carregar estes estilos */
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu {
   background-color: white;
+  position: fixed; 
+  top: 0;
+  width: 100vw; /* viewport widht*/
 }
 
 .menu ul {
@@ -16,6 +54,11 @@ body {
 
 .menu li {
  list-style: none; 
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
 }
 
 a {
@@ -34,6 +77,15 @@ a:hover {
   text-align: center;
 }
 
+.site-title {
+  font-size: 4em; /* 4 vezes o tamanho do body*/
+}
+
 .site-subtitle {
   font-style: italic;
+}
+
+.img-portfolio {
+  height: 180px; /* altura */
+  width: 180px; /* largura */
 }
